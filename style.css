@@ -1,18 +1,171 @@
-<!-- File: style.css -->
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; line-height:1.6; }
-header { background:#004a91; color:#fff; padding:10px 0; }
-nav { width:90%; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-nav .logo { font-size:1.4em; font-weight:bold; }
-nav ul { list-style:none; display:flex; gap:15px; }
-nav ul li a { color:#fff; text-decoration:none; padding:5px 10px; }
-nav ul li a.active, nav ul li a:hover { background:#fff; color:#004a91; border-radius:4px; }
-main { width:90%; margin:20px auto; }
-footer { text-align:center; padding:15px 0; background:#f4f4f4; margin-top:20px; }
-section.intro, .gainers-losers, .news, .allotment-checker, .about { margin-bottom:30px; }
-section.news .news-item { margin-bottom:20px; }
-section.news .news-item img { max-width:100%; height:auto; }
-form { display:flex; flex-direction:column; gap:10px; max-width:400px; }
-form input { padding:8px; }
-form button { padding:10px; background:#004a91; color:#fff; border:none; cursor:pointer; }
-form button:hover { background:#00376b; }
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header and Navigation */
+header {
+  background: #004a91;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #fff;
+  color: #004a91;
+  border-radius: 4px;
+}
+
+/* Main Content Area */
+main {
+  width: 90%;
+  margin: 20px auto;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Intro, About, Gainers/Losers, Allotment */
+.intro h1,
+.about h2,
+.gainers-losers h2,
+.allotment-checker h2 {
+  margin-bottom: 10px;
+  color: #004a91;
+}
+
+.intro p,
+.about p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* News Section */
+.news .news-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news .news-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Gainers/Losers Lists */
+#gainers-list,
+#losers-list {
+  list-style: disc inside;
+  margin-bottom: 15px;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  background: #004a91;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #00376b;
+}
+
+/* Result Box */
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+/* Media Queries: Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
